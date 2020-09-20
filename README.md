@@ -56,7 +56,7 @@ Finally, I tried to improve performance through model stacking. I took inspirati
 Just a small improvement (.014 from the Lasso model), but it does make a difference :)
 
 ## Results 
-The results were satisfactory and I saved them to a new spreadsheet. Although the accuracy of the model is not that high, I am very happy with the learning of this project.
+The results were satisfactory and I saved them on a new spreadsheet. Although the accuracy of the model is not that high, I am very happy with all the stuff that I learned through this project.
 
 ![alt text](https://github.com/CarlosCRG19/travel-time-prediction/blob/master/results_head.png "Head of the Results spreadsheet")
 
