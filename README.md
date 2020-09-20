@@ -31,6 +31,11 @@ After this, the data was usable for the model.
 ### Exploratory Data Analysis (*exploratory_data_analysis.ipynb*)
 Once the database was clean, I made several visualizations of the data before moving on to building the model. Here are some highlights...
 
+![alt text](https://github.com/CarlosCRG19/travel-time-prediction/blob/master/car_bus_speed.png "Car and bus speeds")
+![alt text](https://github.com/CarlosCRG19/travel-time-prediction/blob/master/day_graph.png "Number of vehicles by Day")
+![alt text](https://github.com/CarlosCRG19/travel-time-prediction/blob/master/hour_graph.png "Number of vehicles by Hour")
+![alt text](https://github.com/CarlosCRG19/travel-time-prediction/blob/master/heat_map.png "Correlations")
+
 This step was helpful in identifying null values and outliers. In this way, I realized that unfortunately the "rating_weather" parameter was only answered by bus passengers, so the data for cars had no value ... for this reason I decided to delete the column -although I would have liked see if the weather had an influence on the travel time-. Also, outliers based on speed were removed since the accuracy of the model.
 
 Since speed is the relationship between distance and time, it would be a redundant variable for the model, so I decided to remove it. *Also, trying to predict travel time, knowing the distance and speed, would be cheating, jeje.*
@@ -50,10 +55,15 @@ Finally, I tried to improve performance through model stacking. I took inspirati
 
 Just a small improvement (.014 from the Lasso model), but it does make a difference :)
 
+## Results 
+The results were satisfactory and I saved them to a new spreadsheet. Although the accuracy of the model is not that high, I am very happy with the learning of this project.
+
+![alt text](https://github.com/CarlosCRG19/travel-time-prediction/blob/master/results_head.png "Head of the Results spreadsheet")
+
 ## Resources Used
 **Python Version:** 3.7  
-**Packages:** pandas, numpy, sklearn, matplotlib, mlxtend
-**Article on Model Stacking:** https://mlfromscratch.com/model-stacking-explained/#/
+**Packages:** pandas, numpy, sklearn, matplotlib, mlxtend \n
+**Article on Model Stacking:** https://mlfromscratch.com/model-stacking-explained/#/ \n
 **Big inspiration from Ken Jee's Data Science Salary Project:** https://www.youtube.com/playlist?list=PL2zq7klxX5ASFejJj80ob9ZAnBHdz5O1t
 
 
