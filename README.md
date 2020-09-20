@@ -62,8 +62,8 @@ The results were satisfactory and I saved them to a new spreadsheet. Although th
 
 ## Resources Used
 **Python Version:** 3.7  
-**Packages:** pandas, numpy, sklearn, matplotlib, mlxtend \n
-**Article on Model Stacking:** https://mlfromscratch.com/model-stacking-explained/#/ \n
+**Packages:** pandas, numpy, sklearn, matplotlib, mlxtend "\n"
+**Article on Model Stacking:** https://mlfromscratch.com/model-stacking-explained/#/ "\n"
 **Big inspiration from Ken Jee's Data Science Salary Project:** https://www.youtube.com/playlist?list=PL2zq7klxX5ASFejJj80ob9ZAnBHdz5O1t
 
 
