@@ -26,15 +26,30 @@ The changes made were:
 * Dropped the "linha", "id_android", "id" and "rating_bus" columns
 * Created a new file for the preprocessed data
 
-Afther this, the data was usable for the model.
+After this, the data was usable for the model.
 
-### Exploratory Data Analysis (exploratory_data_analysis.ipynb)
-visualized data, removed outliers and null values and checked the correlation of the parameters
+### Exploratory Data Analysis (*exploratory_data_analysis.ipynb*)
+Once the database was clean, I made several visualizations of the data before moving on to building the model. Here are some highlights...
+
+This step was helpful in identifying null values and outliers. In this way, I realized that unfortunately the "rating_weather" parameter was only answered by bus passengers, so the data for cars had no value ... for this reason I decided to delete the column -although I would have liked see if the weather had an influence on the travel time-. Also, outliers based on speed were removed since the accuracy of the model.
+
+Since speed is the relationship between distance and time, it would be a redundant variable for the model, so I decided to remove it. *Also, trying to predict travel time, knowing the distance and speed, would be cheating, jeje.*
 
 ### Model Building (*model_building.ipynb*)
-tried three different regression models, stacked the best two models with a meta-regressor and saved the prediction results in a new spreadsheet.
+I tried three different regression models and evaluated them using R-squared, as it is easy to interpret. The performance of the models was as follows:
 
-## Data Preprocessing 
+* **Linear Regression:** 0.639
+* **Random Forest Regression:** 0.550
+* **Lasso Regression:** 0.641
+
+Tbh, I thought that Random Forest and Lasso would easily outperform the Linear model. However, this was not true as Random Forest was much worse and Lasso regression was only slightly better.
+
+Finally, I tried to improve performance through model stacking. I took inspiration from an article by Casper Hansen on how this is a good practice and how it improves the results... and it did...
+
+* **Meta-regressor:** 0.655
+
+Just a small improvement (.014 from the Lasso model), but it does make a difference :)
+
 ## Resources Used
 **Python Version:** 3.7  
 **Packages:** pandas, numpy, sklearn, matplotlib, mlxtend
